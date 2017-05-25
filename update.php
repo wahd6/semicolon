@@ -97,5 +97,4 @@
 			});
 			
 		});
-	</script>	
-	<script type="text/javascript" src="cordova.js"></script>
+	</script>					
