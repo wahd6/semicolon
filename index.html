@@ -46,8 +46,8 @@
 				category 		= item['gsx$category']['$t'];
 				question 		= item['gsx$question']['$t'];
 				answer 			 = item['gsx$answer']['$t'];
-				answerhtmlformat = item['gsx$html_format']['$t'];
-				if(answerhtmlformat == ''){ finalAns = answer; }else{ finalAns = answerhtmlformat; }
+				html 			= item['gsx$html']['$t'];
+				if(html == ''){ finalAns = answer; }else{ finalAns = html; }
 				
 				if(Counter == 1){  collap = 'in'; }else {  collap = ' '; }
 				qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" > <div class="panel-heading"> <h4 class="panel-title"> <a>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+'"> <div class="panel-body">'+finalAns+'</div> </div> </div>';
