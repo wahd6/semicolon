@@ -48,7 +48,7 @@
 				if(Counter == 1){  collap = 'in'; }else {  collap = ' '; }
 				//console.log(category); console.log(question);  console.log(answer);
 				// qAData  +='<div class="quest"><div class="accordionItemHeading"><table><tbody><tr> <td> <div class="circle"><span>'+Counter+'</span></div> </td><td> <h4 class="">'+question+' </h4> </td></tr></tbody></table></div><div class="answer"  style="display: none;"><p>'+answer+'</p></div></div>';
-				qAData  +='<div class="panel panel-default"> <div class="panel-heading"> <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'">'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+'"> <div class="panel-body">'+answer+'</div> </div> </div>';
+				qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" > <div class="panel-heading"> <h4 class="panel-title"> <a>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+'"> <div class="panel-body">'+answer+'</div> </div> </div>';
 				Counter++;
 			});
 			
