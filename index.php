@@ -8,6 +8,32 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<style>
+			
+			 .circle {
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			/* width: 40px; */
+			height: 40px;
+			text-align: center;
+			float: left;
+			background: #122C5F;
+			color: #fff;
+			margin-right: 15px;
+			}
+			
+			 .circle span {
+			color: #fff;
+			font-size: 21px;
+			font-weight: 300;
+			float: left;
+			display: block;
+			margin: 6px 14px;
+			}
+		</style>
+		
 	</head>
 	
 	<body>
@@ -42,23 +68,23 @@
 					</h4>
 					</div>
 					<div id="php" class="panel-collapse collapse">
-					<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-					</div>
-					</div>
-					<div class="panel panel-default">
-					<div class="panel-heading">
-					<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#jQuery">Collapsible Group 3</a>
-					</h4>
-					</div>
-					<div id="jQuery" class="panel-collapse collapse">
-					<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-					</div>
-					</div>
+				<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+				</div>
+				</div>
+				<div class="panel panel-default">
+				<div class="panel-heading">
+				<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#jQuery">Collapsible Group 3</a>
+				</h4>
+				</div>
+				<div id="jQuery" class="panel-collapse collapse">
+				<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+				</div>
+				</div>
 				</div> */?>
 			</div> 
 		</div>

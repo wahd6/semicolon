@@ -8,11 +8,47 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			
+			.circle {
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			
+			width: auto;
+			height: 23px;
+			text-align:top;
+			float: right;
+			background: #ffff00;
+			color: #fff;
+			color: black;
+			padding-top: 3px;
+			margin-right: -15px;
+			margin-top: -10px;
+			border-bottom-left-radius: 50%;
+			font-size: 11px;
+			padding-left: 7px;
+			padding-right: 7px;
+			}
+			
+			.circle span {
+			color: #fff;
+			font-size: 21px;
+			font-weight: 300;
+			float: left;
+			display: block;
+			margin: 6px 14px;
+			}
+			.panel_heading_bg {
+			background-color: #122c5f !important;
+			color: white !important;
+			}
+			
+		</style>
 	</head>
 	
 	<body>
 		<div class="container">
-			<h1 class="text-center"><b style="color:red;">;</b> <i>Developrs</i> Guide<b style="color:green;"> ;</b></h1>
+			<h2 class="text-center"><b style="color:red;">;</b> <i>Developrs Guide</i><b style="color:green;"> ;</b></h2>
 			<div id="promo-wrapper internetissue" style="display:none">
 				<section id="promo">
 					<h2>No Internet Connection</h2>
@@ -50,7 +86,7 @@
 				if(html == ''){ finalAns = answer; }else{ finalAns = html; }
 				
 				if(Counter == 1){  collap = 'in'; }else {  collap = ' '; }
-				qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" > <div class="panel-heading"> <h4 class="panel-title"> <a>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+'"> <div class="panel-body">'+finalAns+'</div> </div> </div>';
+				qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>'+Counter+'</b></span>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">'+finalAns+'</div> </div> </div>';
 				Counter++;
 			});
 			
