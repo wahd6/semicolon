@@ -2,90 +2,108 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		
 		<style>
-			
-			 .circle {
-			-webkit-border-radius: 50%;
-			-moz-border-radius: 50%;
-			border-radius: 50%;
-			/* width: 40px; */
-			height: 40px;
-			text-align: center;
-			float: left;
-			background: #122C5F;
+			.circle {
+			width: auto;
+			height: 23px;
+			text-align:top;
+			float: right;
+			background: #ffff00;
 			color: #fff;
-			margin-right: 15px;
+			color: black;
+			padding-top: 3px;
+			margin-right: -15px;
+			margin-top: -10px;
+			border-bottom-left-radius: 500%;
+			font-size: 11px;
+			padding-left: 7px;
+			padding-right: 7px;
 			}
 			
-			 .circle span {
-			color: #fff;
-			font-size: 21px;
-			font-weight: 300;
-			float: left;
-			display: block;
-			margin: 6px 14px;
+			.panel_heading_bg {
+			background-color: #122c5f !important;
+			color: white !important;
 			}
+			
 		</style>
-		
 	</head>
 	
 	<body>
 		<div class="container">
-			<span id="loaderImage"><img src="images/loader.gif"></span>
-			<h1><b>;</b> Developrs Guide<b>;</b></h1>
+			<h2 class="text-center"><b style="color:red;">;</b> <i>Developrs Guide</i><b style="color:green;"> ;</b></h2>
 			<div id="promo-wrapper internetissue" style="display:none">
 				<section id="promo">
 					<h2>No Internet Connection</h2>
 					<a class="button">Try Again</a>
 				</section>
 			</div>
-			<div class="panel-group" id="accordion">
-				<?php /* DATA APPENDS HERE */?>
-				<?php /* <div class="panel-group" id="accordion">
-					<div class="panel panel-default">
-					<div class="panel-heading">
-					<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#html">Collapsible Group 1</a>
-					</h4>
+			<div class="panel-group" id="accordionMain">
+				<?php	/* HTML */ ?>
+				<div class="panel panel-default"  >  
+					<div class="panel-heading panel_heading_bg" style="cursor:pointer" data-toggle="collapse" data-parent="#accordionMain" href="#collapseHTML"> 
+						<h4 class="panel-title "><a><span class="circle"><b>H</b></span>HTML</a> </h4> 
 					</div>
-					<div id="html" class="panel-collapse collapse in">
-					<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+					<div id="collapseHTML" class="panel-collapse collapse in " style="cursor:pointer"> 
+						<div class="panel-body ">
+							<div class="panel-group" id="accordionHTML">
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionHTML" href="#collapseHTML1" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>1</b></span>question1</a> </h4> </div> <div id="collapseHTML1" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer1</div> </div> </div>
+								
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionHTML" href="#collapseHTML2" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>2</b></span>question2</a> </h4> </div> <div id="collapseHTML2" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer2</div> </div> </div> 
+							</div> 
+						</div> 
+					</div> 
+				</div>
+				<?php	/* HTML  END */ ?>
+				
+				<?php	/* PHP */ ?>
+				<div class="panel panel-default" >  
+					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapsePHP" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>P</b></span>PHP</a> </h4> </div>
+					<div id="collapsePHP" class="panel-collapse collapse " style="cursor:pointer"> 
+						<div class="panel-body ">
+							<div class="panel-group" id="accordionPHP">
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionPHP" href="#collapsePHP1" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>1</b></span>question1</a> </h4> </div> <div id="collapsePHP1" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer1</div> </div> </div>
+								
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionPHP" href="#collapsePHP2" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>2</b></span>question2</a> </h4> </div> <div id="collapsePHP2" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer2</div> </div> </div>
+							</div> 
+						</div>
 					</div>
+				</div>
+				<?php	/* PHP  END */ ?>
+				
+				<?php	/* JAVASCRIPT */ ?>
+				<div class="panel panel-default" >  
+					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseJavaScript" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>JS</b></span>JAVASCRIPT</a> </h4> </div>
+					<div id="collapseJavaScript" class="panel-collapse collapse " style="cursor:pointer"> 
+						<div class="panel-body ">
+							<div class="panel-group" id="accordionJavaScript">
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionJavaScript" href="#collapseJavaScript1" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>1</b></span>question1</a> </h4> </div> <div id="collapseJavaScript1" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer1</div> </div> </div>
+								
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionJavaScript" href="#collapseJavaScript2" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>2</b></span>question2</a> </h4> </div> <div id="collapseJavaScript2" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer2</div> </div> </div>
+							</div> 
+						</div>
 					</div>
-					<div class="panel panel-default">
-					<div class="panel-heading">
-					<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#php">Collapsible Group 2</a>
-					</h4>
+				</div>
+				<?php	/* JAVASCRIPT  END */ ?>
+				
+				<?php	/* MYSQL */ ?>
+				<div class="panel panel-default" >  
+					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseMYSQL" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>SQL</b></span>MYSQL</a> </h4> </div>
+					<div id="collapseMYSQL" class="panel-collapse collapse " style="cursor:pointer"> 
+						<div class="panel-body ">
+							<div class="panel-group" id="accordionMYSQL">
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionMYSQL" href="#collapseMYSQL1" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>1</b></span>question1</a> </h4> </div> <div id="collapseMYSQL1" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer1</div> </div> </div>
+								
+								<div class="panel panel-default" data-toggle="collapse" data-parent="#accordionMYSQL" href="#collapseMYSQL2" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>2</b></span>question2</a> </h4> </div> <div id="collapseMYSQL2" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">answer2</div> </div> </div>
+							</div> 
+						</div>
 					</div>
-					<div id="php" class="panel-collapse collapse">
-				<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 				</div>
-				</div>
-				<div class="panel panel-default">
-				<div class="panel-heading">
-				<h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#jQuery">Collapsible Group 3</a>
-				</h4>
-				</div>
-				<div id="jQuery" class="panel-collapse collapse">
-				<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-				</div>
-				</div>
-				</div> */?>
+				<?php	/* MYSQL  END */ ?>
+				
+				
 			</div> 
 		</div>
 		
@@ -93,7 +111,6 @@
 </html>
 
 <script>
-	$("#loaderImage").show();
 	$(document ).ready(function(){
 		$(".internetissue").hide();
 		var googleDriveSpreadsheetLink = "https://spreadsheets.google.com/feeds/list/1rsStvdM_2X_edrNCqefmuOsz0wXc5d0zRUe1Yi6A2HM/od6/public/values?alt=json";
@@ -103,19 +120,20 @@
 			format: "json"
 		})
 		.done(function( data ) {
-			$("#loaderImage").hide();
 			console.log(data);
+			finalAns = 	'';
 			var qAData = ''; 
 			var collap = ''; 
 			var Counter = 1;
 			$.each( data.feed.entry, function( i, item ) {
 				category 		= item['gsx$category']['$t'];
 				question 		= item['gsx$question']['$t'];
-				answer 			= item['gsx$answer']['$t'];
+				answer 			 = item['gsx$answer']['$t'];
+				html 			= item['gsx$html']['$t'];
+				if(html == ''){ finalAns = answer; }else{ finalAns = html; }
+				
 				if(Counter == 1){  collap = 'in'; }else {  collap = ' '; }
-				//console.log(category); console.log(question);  console.log(answer);
-				// qAData  +='<div class="quest"><div class="accordionItemHeading"><table><tbody><tr> <td> <div class="circle"><span>'+Counter+'</span></div> </td><td> <h4 class="">'+question+' </h4> </td></tr></tbody></table></div><div class="answer"  style="display: none;"><p>'+answer+'</p></div></div>';
-				qAData  +='<div class="panel panel-default"> <div class="panel-heading"> <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'">'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+'"> <div class="panel-body">'+answer+'</div> </div> </div>';
+				qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>'+Counter+'</b></span>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">'+finalAns+'</div> </div> </div>';
 				Counter++;
 			});
 			
