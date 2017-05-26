@@ -13,7 +13,7 @@
 	<body>
 		<div class="container">
 			<span id="loaderImage"><img src="images/loader.gif"></span>
-			<h1>Semicon <b>;</b> Developrs Guide</h1>
+			<h1><b>;</b> Developrs Guide<b>;</b></h1>
 			<div id="promo-wrapper internetissue" style="display:none">
 				<section id="promo">
 					<h2>No Internet Connection</h2>
