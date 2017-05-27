@@ -3,139 +3,177 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="pulldown_refresh/ptrLight.min.css">
+		
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="pulldown_refresh/ptrLight.min.js"></script>
+		<style type="text/css">
+			#content {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 5px 0;
+            text-align: justify;
+            background-color: #434A54;
+			}
+			
+			body #ptr-light-spinner {
+            top: 15px;
+			}
+		</style>
 	</head>
 	
 	<body>
-		<div class="text-center" id="loader" style="display:none"><img src="images/loader.gif" ></img></div>
-		<div class="">
-			<h2 class="text-center"><b style="color:red;">;</b> <i>Developrs Guide</i><b style="color:green;"> ;</b></h2>
-			<div class="internetissue text-center" style="display:none">
-				<section>
-					<h2>No Internet Connection</h2>
-					<a class="button">Try Again</a>
-				</section>
-			</div>
-			<div class="panel-group" id="accordionMain">
-				
-				<!-- HTML -->
-				<div class="panel panel-default"   id="panelForHTML">  
-					<div class="panel-heading panel_heading_bg" style="cursor:pointer" data-toggle="collapse" data-parent="#accordionMain" href="#collapseHTML"> 
-						<h4 class="panel-title "><a><span class="circle_category html_bg"><b>H</b></span>HTML</a> </h4> 
+		<div id="container">
+			<div id="content">
+				<div class="text-center" id="loader" style="display:none"><img src="images/loader.gif" ></img></div>
+				<div class="">
+					<h2 class="text-center"><b style="color:red;">;</b> <i>Developrs Guide</i><b style="color:green;"> ;</b></h2>
+					<div class="internetissue text-center" style="display:none">
+						<section>
+							<h2>No Internet Connection</h2>
+							<a class="button">Try Again</a>
+						</section>
 					</div>
-					<div id="collapseHTML" class="panel-collapse collapse in " style="cursor:pointer"> 
-						<div class="panel-body ">
-							<div class="panel-group" id="accordionHTML">
-								
+					<div class="panel-group" id="accordionMain">
+						
+						<!-- HTML -->
+						<div class="panel panel-default"   id="panelForHTML">  
+							<div class="panel-heading panel_heading_bg" style="cursor:pointer" data-toggle="collapse" data-parent="#accordionMain" href="#collapseHTML"> 
+								<h4 class="panel-title "><a><span class="circle_category html_bg"><b>H</b></span>HTML</a> </h4> 
+							</div>
+							<div id="collapseHTML" class="panel-collapse collapse in " style="cursor:pointer"> 
+								<div class="panel-body ">
+									<div class="panel-group" id="accordionHTML">
+										
+									</div> 
+								</div> 
 							</div> 
-						</div> 
+						</div>
+						<!-- HTML End -->
+						
+						
+						<!-- PHP  -->
+						<div class="panel panel-default"  id="panelForPHP">  
+							<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapsePHP" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category php_bg"><b>P</b></span>PHP</a> </h4> </div>
+							<div id="collapsePHP" class="panel-collapse collapse " style="cursor:pointer"> 
+								<div class="panel-body ">
+									<div class="panel-group" id="accordionPHP">
+										
+									</div> 
+								</div>
+							</div>
+						</div>
+						<!-- PHP  END  -->
+						
+						<!-- JAVASCRIPT  -->
+						<div class="panel panel-default"  id="panelForJavaScript">  
+							<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseJavaScript" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category js_bg"><b>JS</b></span>JAVASCRIPT</a> </h4> </div>
+							<div id="collapseJavaScript" class="panel-collapse collapse " style="cursor:pointer"> 
+								<div class="panel-body ">
+									<div class="panel-group" id="accordionJavaScript">
+										
+										
+									</div> 
+								</div>
+							</div>
+						</div>
+						<!-- JAVASCRIPT  END  -->
+						
+						<!-- MYSQL  -->
+						<div class="panel panel-default" id="panelForMYSQL" >  
+							<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseMYSQL" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category mysql_bg"><b>SQL</b></span>MYSQL</a> </h4> </div>
+							<div id="collapseMYSQL" class="panel-collapse collapse " style="cursor:pointer"> 
+								<div class="panel-body ">
+									<div class="panel-group" id="accordionMYSQL">
+										
+									</div> 
+								</div>
+							</div>
+						</div>
+						<!-- MYSQL  END  -->
+						
+						<!-- Otheres  -->
+						<div class="panel panel-default" id="panelForOther">  
+							<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseOther" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category other_bg"><b>SQL</b></span>MYSQL</a> </h4> </div>
+							<div id="collapseOther" class="panel-collapse collapse " style="cursor:pointer"> 
+								<div class="panel-body ">
+									<div class="panel-group" id="accordionMYSQL">
+										
+									</div> 
+								</div>
+							</div>
+						</div>
+						<!-- Otheres  END  -->
+						
 					</div> 
 				</div>
-				<!-- HTML End -->
 				
 				
-				<!-- PHP  -->
-				<div class="panel panel-default"  id="panelForPHP">  
-					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapsePHP" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category php_bg"><b>P</b></span>PHP</a> </h4> </div>
-					<div id="collapsePHP" class="panel-collapse collapse " style="cursor:pointer"> 
-						<div class="panel-body ">
-							<div class="panel-group" id="accordionPHP">
-								
-							</div> 
-						</div>
-					</div>
-				</div>
-				<!-- PHP  END  -->
-				
-				<!-- JAVASCRIPT  -->
-				<div class="panel panel-default"  id="panelForJavaScript">  
-					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseJavaScript" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category js_bg"><b>JS</b></span>JAVASCRIPT</a> </h4> </div>
-					<div id="collapseJavaScript" class="panel-collapse collapse " style="cursor:pointer"> 
-						<div class="panel-body ">
-							<div class="panel-group" id="accordionJavaScript">
-								
-								
-							</div> 
-						</div>
-					</div>
-				</div>
-				<!-- JAVASCRIPT  END  -->
-				
-				<!-- MYSQL  -->
-				<div class="panel panel-default" id="panelForMYSQL" >  
-					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseMYSQL" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category mysql_bg"><b>SQL</b></span>MYSQL</a> </h4> </div>
-					<div id="collapseMYSQL" class="panel-collapse collapse " style="cursor:pointer"> 
-						<div class="panel-body ">
-							<div class="panel-group" id="accordionMYSQL">
-								
-							</div> 
-						</div>
-					</div>
-				</div>
-				<!-- MYSQL  END  -->
-				
-				<!-- Otheres  -->
-				<div class="panel panel-default" id="panelForOther">  
-					<div  data-toggle="collapse" data-parent="#accordionMain" href="#collapseOther" class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle_category other_bg"><b>SQL</b></span>MYSQL</a> </h4> </div>
-					<div id="collapseOther" class="panel-collapse collapse " style="cursor:pointer"> 
-						<div class="panel-body ">
-							<div class="panel-group" id="accordionMYSQL">
-								
-							</div> 
-						</div>
-					</div>
-				</div>
-				<!-- Otheres  END  -->
-				
-			</div> 
+			</div>
 		</div>
-		
 	</body>
 </html>
 <script type="text/javascript">
+	$(function() {
+		$('#content').ptrLight({
+			'refresh': function(ptrLightInstance) {
+				console.log('Updating...');
+				setTimeout(function() {
+					console.log('Updated!');
+					ptrLightInstance.done();
+				}, 2000);
+			},
+			pullThreshold: $(window).height() * 0.5,
+			maxPullThreshold: $(window).height()
+		});
+	});
+	
+	
+	
+	
+	
+	
+	
 	$(".internetissue").hide();
-	$("#loader").show();
+	//$("#loader").show();
 	$(document ).ready(function(){
 		GetSheetData();
 		//$("#loader").hide();
 	});
-	//var x = 0;
-	var mouseY = 0;
-	var startMouseY = 0;
-	$('body').on('mousedown', function (ev) {
+	/*
+		var mouseY = 0;
+		var startMouseY = 0;
+		$('body').on('mousedown', function (ev) {
 		mouseY = ev.pageY;
 		startMouseY = mouseY;
 		$(document).on('mousemove', function (e) {
-			if (e.pageY > mouseY) {
-				var d = e.pageY - startMouseY;
-				console.log("d: " + d);
-				if (d >= 200 ) {
-					//	if (d >= 200 && x == 0) {
-					$("#loader").show();
-					//$('.loader').append($('<img/>').attr('src', 'images/loader.gif'));
-					GetSheetData();
-					//$("#loader").hide();
-					//	x = 1;
-				}
-				$('body').css('margin-top', d/4 + 'px');
-			}
-			else
-			$(document).unbind("mousemove");
+		if (e.pageY > mouseY) {
+		var d = e.pageY - startMouseY;
+		console.log("d: " + d);
+		if (d >= 200 ) {
+		$("#loader").show();
+		GetSheetData();
+		//$("#loader").hide();
+		}
+		$('body').css('margin-top', d/4 + 'px');
+		}
+		else
+		$(document).unbind("mousemove");
 		});
-	});
-	$('body').on('mouseup', function () {
+		});
+		$('body').on('mouseup', function () {
 		$('body').css('margin-top', '0px');
 		$(document).unbind("mousemove");
-	});
-	$('body').on('mouseleave', function () {
+		});
+		$('body').on('mouseleave', function () {
 		
 		$('body').css('margin-top', '0px');
 		$(document).unbind("mousemove");
-	});
-	
+		});
+	*/
 	
 	function GetSheetData(){
 		
@@ -215,7 +253,7 @@
 			$("#accordionJavaScript").html(javascriptData);
 			$("#accordionMYSQL").html(mysqlData);
 			$("#accordionOther").html(othersData);
-			$("#loader").hide();
+			//$("#loader").hide();
 		})
 		.fail(function() {
 			$(".internetissue").show();
