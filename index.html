@@ -122,13 +122,13 @@
 			'refresh': function(ptrLightInstance) {
 				GetSheetData();
 				//console.log('Updating...');
-				//setTimeout(function() {
+				setTimeout(function() {
 					//console.log('Updated!');
-				//	GetSheetData();
-				//	ptrLightInstance.done();
-				//}, 2000);
+					//GetSheetData();
+					ptrLightInstance.done();
+				}, 0);
 			},
-			pullThreshold: $(window).height() * 0.3,
+			pullThreshold: $(window).height() * 0.5,
 			maxPullThreshold: $(window).height()
 		});
 	});
