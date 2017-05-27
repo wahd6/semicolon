@@ -102,7 +102,7 @@
 		GetSheetData();
 		//$("#loader").hide();
 	});
-	var x = 0;
+	//var x = 0;
 	var mouseY = 0;
 	var startMouseY = 0;
 	$('body').on('mousedown', function (ev) {
@@ -112,12 +112,13 @@
 			if (e.pageY > mouseY) {
 				var d = e.pageY - startMouseY;
 				console.log("d: " + d);
-				if (d >= 200 && x == 0) {
+				if (d >= 200 ) {
+					//	if (d >= 200 && x == 0) {
 					$("#loader").show();
 					//$('.loader').append($('<img/>').attr('src', 'images/loader.gif'));
 					GetSheetData();
 					//$("#loader").hide();
-					x = 1;
+					//	x = 1;
 				}
 				$('body').css('margin-top', d/4 + 'px');
 			}
