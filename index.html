@@ -122,7 +122,8 @@
 			'refresh': function(ptrLightInstance) {
 				console.log('Updating...');
 				setTimeout(function() {
-					console.log('Updated!');
+					//console.log('Updated!');
+					GetSheetData();
 					ptrLightInstance.done();
 				}, 2000);
 			},
