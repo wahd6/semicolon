@@ -11,14 +11,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="pulldown_refresh/ptrLight.min.js"></script>
 		<style type="text/css">
-			#content {
-            max-width: 450px;
-            margin: 0 auto;
-            padding: 5px 0;
-            text-align: justify;
-            background-color: #434A54;
-			}
-			
 			body #ptr-light-spinner {
             top: 15px;
 			}
@@ -30,7 +22,7 @@
 			<div id="content">
 				<div class="text-center" id="loader" style="display:none"><img src="images/loader.gif" ></img></div>
 				<div class="">
-					<h2 class="text-center"><b style="color:red;">;</b> <i>Developrs Guide</i><b style="color:green;"> ;</b></h2>
+					<h2 class="text-center"><b style="color:red;">;</b> <i><strong>Developrs Guide</strong></i><b style="color:green;"> ;</b></h2>
 					<div class="internetissue text-center" style="display:none">
 						<section>
 							<h2>No Internet Connection</h2>
@@ -117,6 +109,39 @@
 	</body>
 </html>
 <script type="text/javascript">
+	/*system refresh start */
+	var mouseY = 0;
+	var startMouseY = 0;
+	$('body').on('mousedown', function (ev) {
+		mouseY = ev.pageY;
+		startMouseY = mouseY;
+		$(document).on('mousemove', function (e) {
+			if (e.pageY > mouseY) {
+				var d = e.pageY - startMouseY;
+				console.log("d: " + d);
+				if (d >= 200 ) {
+					$("#loader").show();
+					GetSheetData();
+					$("#loader").hide();
+				}
+				$('body').css('margin-top', d/4 + 'px');
+			}
+			else
+			$(document).unbind("mousemove");
+		});
+	});
+	$('body').on('mouseup', function () {
+		$('body').css('margin-top', '0px');
+		$(document).unbind("mousemove");
+	});
+	$('body').on('mouseleave', function () {
+		
+		$('body').css('margin-top', '0px');
+		$(document).unbind("mousemove");
+	});
+	/*system refresh end */
+	
+	/*Mobile refresh start */
 	$(function() {
 		$('#content').ptrLight({
 			'refresh': function(ptrLightInstance) {
@@ -124,7 +149,6 @@
 				//console.log('Updating...');
 				setTimeout(function() {
 					//console.log('Updated!');
-					//GetSheetData();
 					ptrLightInstance.done();
 				}, 1000);
 			},
@@ -132,50 +156,14 @@
 			maxPullThreshold: $(window).height()
 		});
 	});
-	
-	
-	
-	
-	
+	/*Mobile refresh end */
 	
 	
 	$(".internetissue").hide();
-	//$("#loader").show();
 	$(document ).ready(function(){
 		GetSheetData();
-		//$("#loader").hide();
 	});
-	/*
-		var mouseY = 0;
-		var startMouseY = 0;
-		$('body').on('mousedown', function (ev) {
-		mouseY = ev.pageY;
-		startMouseY = mouseY;
-		$(document).on('mousemove', function (e) {
-		if (e.pageY > mouseY) {
-		var d = e.pageY - startMouseY;
-		console.log("d: " + d);
-		if (d >= 200 ) {
-		$("#loader").show();
-		GetSheetData();
-		//$("#loader").hide();
-		}
-		$('body').css('margin-top', d/4 + 'px');
-		}
-		else
-		$(document).unbind("mousemove");
-		});
-		});
-		$('body').on('mouseup', function () {
-		$('body').css('margin-top', '0px');
-		$(document).unbind("mousemove");
-		});
-		$('body').on('mouseleave', function () {
-		
-		$('body').css('margin-top', '0px');
-		$(document).unbind("mousemove");
-		});
-	*/
+	
 	
 	function GetSheetData(){
 		

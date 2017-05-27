@@ -111,38 +111,74 @@
 </html>
 
 <script>
-	// $(document ).ready(function(){
-		// $(".internetissue").hide();
-		// var googleDriveSpreadsheetLink = "https://spreadsheets.google.com/feeds/list/1rsStvdM_2X_edrNCqefmuOsz0wXc5d0zRUe1Yi6A2HM/od6/public/values?alt=json";
-		// $.getJSON( googleDriveSpreadsheetLink, {
-			// tags: "mount rainier",
-			// tagmode: "any",
-			// format: "json"
-		// })
-		// .done(function( data ) {
-			// console.log(data);
-			// finalAns = 	'';
-			// var qAData = ''; 
-			// var collap = ''; 
-			// var Counter = 1;
-			// $.each( data.feed.entry, function( i, item ) {
-				// category 		= item['gsx$category']['$t'];
-				// question 		= item['gsx$question']['$t'];
-				// answer 			 = item['gsx$answer']['$t'];
-				// html 			= item['gsx$html']['$t'];
-				// if(html == ''){ finalAns = answer; }else{ finalAns = html; }
-				
-				// if(Counter == 1){  collap = 'in'; }else {  collap = ' '; }
-				// qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>'+Counter+'</b></span>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">'+finalAns+'</div> </div> </div>';
-				// Counter++;
-			// });
-			
-			// $("#accordion").html(qAData);
-		// })
-		// .fail(function() {
-			// $(".internetissue").show();
-		// });
+	
+	/*
+		var mouseY = 0;
+		var startMouseY = 0;
+		$('body').on('mousedown', function (ev) {
+		mouseY = ev.pageY;
+		startMouseY = mouseY;
+		$(document).on('mousemove', function (e) {
+		if (e.pageY > mouseY) {
+		var d = e.pageY - startMouseY;
+		console.log("d: " + d);
+		if (d >= 200 ) {
+		$("#loader").show();
+		GetSheetData();
+		//$("#loader").hide();
+		}
+		$('body').css('margin-top', d/4 + 'px');
+		}
+		else
+		$(document).unbind("mousemove");
+		});
+		});
+		$('body').on('mouseup', function () {
+		$('body').css('margin-top', '0px');
+		$(document).unbind("mousemove");
+		});
+		$('body').on('mouseleave', function () {
 		
+		$('body').css('margin-top', '0px');
+		$(document).unbind("mousemove");
+		});
+	*/
+	
+	
+	
+	
+	// $(document ).ready(function(){
+	// $(".internetissue").hide();
+	// var googleDriveSpreadsheetLink = "https://spreadsheets.google.com/feeds/list/1rsStvdM_2X_edrNCqefmuOsz0wXc5d0zRUe1Yi6A2HM/od6/public/values?alt=json";
+	// $.getJSON( googleDriveSpreadsheetLink, {
+	// tags: "mount rainier",
+	// tagmode: "any",
+	// format: "json"
+	// })
+	// .done(function( data ) {
+	// console.log(data);
+	// finalAns = 	'';
+	// var qAData = ''; 
+	// var collap = ''; 
+	// var Counter = 1;
+	// $.each( data.feed.entry, function( i, item ) {
+	// category 		= item['gsx$category']['$t'];
+	// question 		= item['gsx$question']['$t'];
+	// answer 			 = item['gsx$answer']['$t'];
+	// html 			= item['gsx$html']['$t'];
+	// if(html == ''){ finalAns = answer; }else{ finalAns = html; }
+	
+	// if(Counter == 1){  collap = 'in'; }else {  collap = ' '; }
+	// qAData  +='<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapse'+Counter+'" >  <div class="panel-heading panel_heading_bg" style="cursor:pointer"> <h4 class="panel-title "><a><span class="circle"><b>'+Counter+'</b></span>'+question+'</a> </h4> </div> <div id="collapse'+Counter+'" class="panel-collapse collapse '+collap+' " style="cursor:pointer"> <div class="panel-body ">'+finalAns+'</div> </div> </div>';
+	// Counter++;
+	// });
+	
+	// $("#accordion").html(qAData);
+	// })
+	// .fail(function() {
+	// $(".internetissue").show();
+	// });
+	
 	// });
 </script>	
 <script type="text/javascript" src="cordova.js"></script>
