@@ -10,6 +10,7 @@
 	</head>
 	
 	<body>
+		<div class="text-center" id="loader" style="display:none"><img src="images/loader.gif" ></img></div>
 		<div class="">
 			<h2 class="text-center"><b style="color:red;">;</b> <i>Developrs Guide</i><b style="color:green;"> ;</b></h2>
 			<div class="internetissue text-center" style="display:none">
@@ -96,7 +97,47 @@
 </html>
 <script type="text/javascript">
 	$(".internetissue").hide();
+	$("#loader").show();
 	$(document ).ready(function(){
+		GetSheetData();
+		//$("#loader").hide();
+	});
+	var x = 0;
+	var mouseY = 0;
+	var startMouseY = 0;
+	$('body').on('mousedown', function (ev) {
+		mouseY = ev.pageY;
+		startMouseY = mouseY;
+		$(document).on('mousemove', function (e) {
+			if (e.pageY > mouseY) {
+				var d = e.pageY - startMouseY;
+				console.log("d: " + d);
+				if (d >= 200 && x == 0) {
+					$("#loader").show();
+					//$('.loader').append($('<img/>').attr('src', 'images/loader.gif'));
+					GetSheetData();
+					//$("#loader").hide();
+					x = 1;
+				}
+				$('body').css('margin-top', d/4 + 'px');
+			}
+			else
+			$(document).unbind("mousemove");
+		});
+	});
+	$('body').on('mouseup', function () {
+		$('body').css('margin-top', '0px');
+		$(document).unbind("mousemove");
+	});
+	$('body').on('mouseleave', function () {
+		
+		$('body').css('margin-top', '0px');
+		$(document).unbind("mousemove");
+	});
+	
+	
+	function GetSheetData(){
+		
 		var googleDriveSpreadsheetLink = "https://spreadsheets.google.com/feeds/list/1rsStvdM_2X_edrNCqefmuOsz0wXc5d0zRUe1Yi6A2HM/od6/public/values?alt=json";
 		$.getJSON( googleDriveSpreadsheetLink, {
 			tags: "mount rainier",
@@ -173,12 +214,15 @@
 			$("#accordionJavaScript").html(javascriptData);
 			$("#accordionMYSQL").html(mysqlData);
 			$("#accordionOther").html(othersData);
+			$("#loader").hide();
 		})
 		.fail(function() {
 			$(".internetissue").show();
 		});
 		
-	});
+		
+		
+	}
 </script>
 <!-- <script type="text/javascript" src="js/accordion.js"></script> -->
-<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>			
