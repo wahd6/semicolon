@@ -120,14 +120,15 @@
 	$(function() {
 		$('#content').ptrLight({
 			'refresh': function(ptrLightInstance) {
-				console.log('Updating...');
-				setTimeout(function() {
+				GetSheetData();
+				//console.log('Updating...');
+				//setTimeout(function() {
 					//console.log('Updated!');
-					GetSheetData();
-					ptrLightInstance.done();
-				}, 2000);
+				//	GetSheetData();
+				//	ptrLightInstance.done();
+				//}, 2000);
 			},
-			pullThreshold: $(window).height() * 0.5,
+			pullThreshold: $(window).height() * 0.3,
 			maxPullThreshold: $(window).height()
 		});
 	});
