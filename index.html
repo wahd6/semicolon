@@ -109,6 +109,13 @@
 	</body>
 </html>
 <script type="text/javascript">
+	$('#accordionMain').on('shown.bs.collapse', function() {
+		var panel = $(this).find('.in');	
+		$('html, body').animate({
+			scrollTop: panel.offset().top
+		});
+	});
+	
 	/*system refresh start */
 	var mouseY = 0;
 	var startMouseY = 0;
